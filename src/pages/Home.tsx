@@ -2,24 +2,27 @@ import React from 'react'
 import IllustrationImg from '../assets/images/illustration.svg'
 import LogoImg from '../assets/images/logo.svg'
 import GoogleIcon from '../assets/images/google-icon.svg'
+import '../styles/auth.scss'
+import { Button } from '../components/Button'
+
 
 export function Home(){
   return(
-    <div>
+    <div id="page-auth">
       <aside>
         <img src={IllustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
         <strong>Crie salas de Q&amp;A ao vivo </strong>
         <p>Tire as dúvidas da sua audiência em tempo real</p>
       </aside>
       <main>
-        <div>
+        <div className="main-content">
           <img src={LogoImg} alt="Letmeask logo" />
-          <button>
+          <button className="create-room">
             <img src={GoogleIcon} alt="Logo do google" />
             Crie sua sala com o google
           </button>
 
-          <div>
+          <div className="separator">
             ou entre em uma sala
           </div>
 
@@ -28,9 +31,9 @@ export function Home(){
               type="text"
               placeholder="Digite o código da sala"
             />
-            <button type="submit">
+            <Button type="submit">
               Entrar na sala
-            </button>
+            </Button>
           </form>
         </div>
       </main>
